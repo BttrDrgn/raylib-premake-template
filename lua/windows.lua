@@ -61,7 +61,7 @@ workspace(project_name)
 	project "game"
 		targetname "game"
 		language "c++"
-		cppdialect "c++17"
+		cppdialect "c++20"
 		warnings "off"
 
 		defines {

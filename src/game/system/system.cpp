@@ -27,6 +27,10 @@ int system::init(int argc, char* argv[])
 	{
 		gfx::set_target_fps(std::stoi(fps));
 	}
+	else
+	{
+		gfx::set_target_fps(300);
+	}
 
 	gfx::init(system::resolution, APPNAME);
 	input::init();

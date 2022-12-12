@@ -1,6 +1,6 @@
 #pragma once
 
-#include "gfx/gfx.hpp"
+#include "system/system.hpp"
 #include "input/input.hpp"
 #define M_PI 3.14159265358979323846264338327950288
 
@@ -29,12 +29,12 @@ public:
 
 	static float scale_width(float width)
 	{
-		return scale_width(width, gfx::resolution.x);
+		return scale_width(width, system::resolution.x);
 	}
 
 	static float scale_height(float height)
 	{
-		return scale_height(height, gfx::resolution.y);
+		return scale_height(height, system::resolution.y);
 	}
 
 	static Rectangle scale_rect(Rectangle rect)
@@ -203,17 +203,17 @@ public:
 
 	static bool is_on_screen(Rectangle rect)
 	{
-		return !(rect.x < -rect.width * 4 || rect.x - rect.width * 4 > gfx::resolution.x || rect.y < -rect.height * 4 || rect.y - rect.height * 4 > gfx::resolution.y);
+		return !(rect.x < -rect.width * 4 || rect.x - rect.width * 4 > system::resolution.x || rect.y < -rect.height * 4 || rect.y - rect.height * 4 > system::resolution.y);
 	}
 
 	static bool is_on_screen(Vector2 loc, float size)
 	{
-		return !(loc.x < -size * 4 || loc.x - size * 4 > gfx::resolution.x || loc.y < -size * 4 || loc.y - size * 4 > gfx::resolution.y);
+		return !(loc.x < -size * 4 || loc.x - size * 4 > system::resolution.x || loc.y < -size * 4 || loc.y - size * 4 > system::resolution.y);
 	}
 
 	static bool is_on_screen(Vector2 loc, Vector2 size)
 	{
-		return !(loc.x < -size.x * 4 || loc.x - size.x * 4 > gfx::resolution.x || loc.y < -size.y * 4 || loc.y - size.y * 4 > gfx::resolution.y);
+		return !(loc.x < -size.x * 4 || loc.x - size.x * 4 > system::resolution.x || loc.y < -size.y * 4 || loc.y - size.y * 4 > system::resolution.y);
 	}
 
 	static int rectcmp(Rectangle rect_0, Rectangle rect_1)

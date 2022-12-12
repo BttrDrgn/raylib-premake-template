@@ -272,7 +272,6 @@ int* gfx::get_monitor_res(int monitor)
 }
 
 Color gfx::reset_col;
-Vector2 gfx::resolution;
 bool gfx::show_fps;
 
 std::vector<std::pair<std::string, gfx::image_t>> gfx::textures_ram;

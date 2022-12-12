@@ -57,7 +57,6 @@ public:
 	static int* get_monitor_res(int monitor);
 
 	static Color reset_col;
-	static Vector2 resolution;
 	static bool show_fps;
 
 	static std::vector<std::pair<std::string, image_t>> textures_ram;
